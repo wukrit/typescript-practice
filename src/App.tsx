@@ -1,13 +1,25 @@
 import React from "react"
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { Route } from "react-router-dom"
 import Nav from "./Components/Nav"
-import "./CSS/App.css"
+import { AboutContainer, BlogContainer, PortfolioContainer, SplashContainer } from "./Containers"
 
 const App: React.FC = () => {
   return (
-    <div className='App'>
+    <>
       <Nav />
-    </div>
+      <Route exact path='/about'>
+        <AboutContainer />
+      </Route>
+      <Route exact path='/blog'>
+        <BlogContainer />
+      </Route>
+      <Route exact path='/portfolio'>
+        <PortfolioContainer />
+      </Route>
+      <Route exact path='/'>
+        <SplashContainer />
+      </Route>
+    </>
   )
 }
 
