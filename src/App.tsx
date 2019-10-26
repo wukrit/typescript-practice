@@ -1,11 +1,12 @@
 import React from "react"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import Nav from "./Components/Nav"
 import "./CSS/App.css"
-import HeaderContainer from "./Containers/HeaderContainer"
 
 const App: React.FC = () => {
   return (
     <div className='App'>
-      <HeaderContainer />
+      <Nav />
     </div>
   )
 }
